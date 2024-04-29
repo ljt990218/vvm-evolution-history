@@ -14,6 +14,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import Sitemap from 'vite-plugin-sitemap'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import { VarletImportResolver } from '@varlet/import-resolver'
 import { createViteVConsole } from './vconsole'
 
 export function createVitePlugins() {
@@ -36,7 +37,7 @@ export function createVitePlugins() {
     // https://github.com/antfu/unplugin-vue-components
     Components({
       extensions: ['vue'],
-      resolvers: [VantResolver()],
+      resolvers: [VantResolver(), VarletImportResolver()],
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
     }),
@@ -64,6 +65,7 @@ export function createVitePlugins() {
       dirs: [
         'src/composables',
       ],
+      resolvers: [VarletImportResolver({ autoImport: true })],
     }),
 
     // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n

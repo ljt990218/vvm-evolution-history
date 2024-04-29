@@ -1,28 +1,30 @@
 <script setup lang="ts">
+import useAppStore from '@/stores/modules/app'
+
 const { t } = useI18n()
-const active = ref(0)
 const route = useRoute()
+const router = useRouter()
+const appStore = useAppStore()
+const active = ref(appStore.tabBarActive)
 
 const display = computed(() => {
   if (route.meta.level && route.meta.level !== 2)
     return true
   return false
 })
+
+function change(e: string) {
+  router.replace(e)
+  appStore.setTabBarActive(e)
+}
 </script>
 
 <template>
-  <van-tabbar v-show="display" v-model="active" route>
-    <van-tabbar-item replace to="/">
-      {{ t('layouts.home') }}
-      <template #icon>
-        <div class="i-carbon:home" />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item replace to="/profile">
-      {{ t('layouts.profile') }}
-      <template #icon>
-        <div class="i-carbon:user" />
-      </template>
-    </van-tabbar-item>
-  </van-tabbar>
+  <var-bottom-navigation
+    v-show="display" v-model:active="active" :fixed="true" :safe-area="true"
+    :border="true" @change="change(active)"
+  >
+    <var-bottom-navigation-item name="/" :label="t('layouts.home')" icon="home" />
+    <var-bottom-navigation-item name="profile" :label="t('layouts.profile')" icon="account-circle" />
+  </var-bottom-navigation>
 </template>

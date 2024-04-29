@@ -5,17 +5,20 @@
 }
 
 html {
-  background: var(--van-gray-1);
+  background: #ffffff;
   color-scheme: light;
 }
 
 html.dark {
-  background: #222;
+  background: #1e1e1e;
   color-scheme: dark;
 }
 
 body {
   overflow: hidden;
+  transition: background-color .25s, color .25s;
+  color: var(--color-text);
+  background-color: var(--color-body);
 }
 
 #app {

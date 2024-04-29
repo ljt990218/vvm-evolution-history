@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { PickerColumn } from 'vant'
 import useAppStore from '@/stores/modules/app'
 import { languageColumns, locale } from '@/utils/i18n'
 
@@ -28,53 +27,68 @@ function toggle() {
 
 const { t } = useI18n()
 
-const showLanguagePicker = ref(false)
-const languageValues = ref<Array<string>>([locale.value])
 const language = computed(() => languageColumns.find(l => l.value === locale.value).text)
 
-function onLanguageConfirm(event: { selectedOptions: PickerColumn }) {
-  locale.value = event.selectedOptions[0].value as string
-  showLanguagePicker.value = false
+async function languagePicker() {
+  await Picker({
+    modelValue: [locale.value],
+    toolbar: true,
+    columns: [
+      languageColumns,
+    ],
+    onConfirm(values) {
+      if (locale.value === values[0])
+        return
+      locale.value = values[0] as string
+    },
+  })
 }
 
-const menuItems = computed(() => ([
-  { title: t('home.mockGuide'), route: 'mock' },
-  { title: t('home.echartsDemo'), route: 'charts' },
-  { title: t('home.unocssExample'), route: 'unocss' },
-  { title: t('home.persistPiniaState'), route: 'counter' },
-  { title: t('home.404Demo'), route: 'unknown' },
-  { title: t('home.keepAlive'), route: 'keepalive' },
+const router = useRouter()
+const menuList = computed(() => ([
+  { title: t('home.mockGuide'), router: 'mock' },
+  { title: t('home.echartsDemo'), router: 'charts' },
+  { title: t('home.persistPiniaState'), router: 'counter' },
+  { title: t('home.404Demo'), router: 'unknown' },
+  { title: t('home.unocssExample'), router: 'unocss' },
+  { title: t('home.keepAlive'), router: 'keepalive' },
 ]))
+
+function menuClick(item: any) {
+  if (item.router)
+    router.push(item.router)
+}
 </script>
 
 <template>
   <Container :padding-x="0">
-    <VanCellGroup inset>
-      <VanCell center :title="$t('home.darkMode')">
-        <template #right-icon>
-          <VanSwitch v-model="checked" size="20px" aria-label="on/off Dark Mode" @click="toggle()" />
+    <var-paper :elevation="2" class="m-10 mt-20">
+      <var-cell ripple :border="true" :border-offset="0">
+        {{ t('home.darkMode') }}
+        <template #extra>
+          <var-switch v-model="checked" @click="toggle" />
         </template>
-      </VanCell>
+      </var-cell>
 
-      <VanCell
-        is-link
-        :title="$t('home.language')"
-        :value="language"
-        @click="showLanguagePicker = true"
-      />
+      <var-cell ripple :border="true" :border-offset="0" @click="languagePicker">
+        {{ t('home.language') }}
+        <template #extra>
+          <div class="w-150 flex items-center justify-right">
+            {{ language }}
+            <var-icon name="chevron-right" />
+          </div>
+        </template>
+      </var-cell>
 
-      <van-popup v-model:show="showLanguagePicker" position="bottom">
-        <van-picker
-          v-model="languageValues"
-          :columns="languageColumns"
-          @confirm="onLanguageConfirm"
-          @cancel="showLanguagePicker = false"
-        />
-      </van-popup>
-
-      <template v-for="item in menuItems" :key="item.route">
-        <VanCell :title="item.title" :to="item.route" is-link />
-      </template>
-    </VanCellGroup>
+      <var-cell
+        v-for="(item, index) in menuList" :key="item.title" ripple :border="index !== menuList.length - 1"
+        :border-offset="0" @click="menuClick(item)"
+      >
+        {{ item.title }}
+        <template #extra>
+          <var-icon name="chevron-right" />
+        </template>
+      </var-cell>
+    </var-paper>
   </Container>
 </template>

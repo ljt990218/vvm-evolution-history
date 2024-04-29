@@ -1,13 +1,12 @@
 import { createI18n } from 'vue-i18n'
-import enUS from 'vant/es/locale/lang/en-US'
-import zhCN from 'vant/es/locale/lang/zh-CN'
 
 /**
  * All i18n resources specified in the plugin `include` option can be loaded
  * at once using the import syntax
  */
 import messages from '@intlify/unplugin-vue-i18n/messages'
-import { Locale, type PickerColumn } from 'vant'
+import { Locale } from '@varlet/ui'
+import type { PickerColumnOption } from '@varlet/ui'
 
 export const i18n = createI18n({
   locale: localStorage.getItem('language') || navigator.language,
@@ -16,7 +15,7 @@ export const i18n = createI18n({
 })
 
 /** 多语言 picker columns */
-export const languageColumns: PickerColumn = [
+export const languageColumns: PickerColumnOption[] = [
   { text: '简体中文', value: 'zh-CN' },
   { text: 'English', value: 'en-US' },
 ]
@@ -34,8 +33,8 @@ export const locale = computed({
 })
 
 // 载入 vant 语言包
-Locale.use('zh-CN', zhCN)
-Locale.use('en-US', enUS)
+Locale.add('zh-CN', Locale.zhCN)
+Locale.add('en-US', Locale.enUS)
 
 // 根据当前语言切换 vant 语言包
 Locale.use(locale.value)

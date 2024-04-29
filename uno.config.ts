@@ -5,6 +5,7 @@ import {
   presetMini,
   presetUno,
 } from 'unocss'
+import { presetVarlet } from '@varlet/preset-unocss'
 
 import presetRemToPx from '@unocss/preset-rem-to-px'
 
@@ -13,6 +14,7 @@ import presetRemToPx from '@unocss/preset-rem-to-px'
 export default defineConfig({
   presets: [
     presetUno,
+    presetVarlet(),
     presetAttributify,
     presetIcons(),
     // 为什么要用到这个插件？

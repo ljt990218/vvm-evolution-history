@@ -27,7 +27,6 @@ useHead({
 })
 
 const appStore = useAppStore()
-const { mode } = storeToRefs(appStore)
 
 const routeTransitionNameStore = useRouteTransitionNameStore()
 const { routeTransitionName } = storeToRefs(routeTransitionNameStore)
@@ -43,15 +42,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <VanConfigProvider :theme="mode">
-    <NavBar />
-    <router-view v-slot="{ Component, route }">
-      <transition :name="routeTransitionName">
-        <keep-alive :include="keepAliveRouteNames">
-          <component :is="Component" :key="route.name" />
-        </keep-alive>
-      </transition>
-    </router-view>
-    <TabBar />
-  </VanConfigProvider>
+  <NavBar />
+  <router-view v-slot="{ Component, route }">
+    <transition :name="routeTransitionName">
+      <keep-alive :include="keepAliveRouteNames">
+        <component :is="Component" :key="route.name" />
+      </keep-alive>
+    </transition>
+  </router-view>
+  <TabBar />
 </template>
