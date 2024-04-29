@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router/auto'
 
+import { LoadingBar } from '@varlet/ui'
+
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
@@ -15,7 +17,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to: EnhancedRouteLocation, from, next) => {
-  NProgress.start()
+  LoadingBar.start()
 
   const routeCacheStore = useRouteCacheStore()
   const routeTransitionNameStore = useRouteTransitionNameStore()
@@ -36,7 +38,7 @@ router.beforeEach((to: EnhancedRouteLocation, from, next) => {
 })
 
 router.afterEach(() => {
-  NProgress.done()
+  LoadingBar.finish()
 })
 
 export default router
