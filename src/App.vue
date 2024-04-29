@@ -6,7 +6,7 @@ import useRouteTransitionNameStore from '@/stores/modules/routeTransitionName'
 import useAutoThemeSwitcher from '@/hooks/useAutoThemeSwitcher'
 
 useHead({
-  title: 'Vue3 Vant Mobile',
+  title: 'Vue3 Varlet Mobile',
   meta: [
     {
       name: 'description',

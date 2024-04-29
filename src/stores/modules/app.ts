@@ -1,9 +1,8 @@
 import { defineStore } from 'pinia'
-import type { ConfigProviderTheme } from 'vant'
 import { StyleProvider, Themes } from '@varlet/ui'
 
 export interface AppStore {
-  swithMode: (val: ConfigProviderTheme) => void
+  swithMode: (val: string) => void
   setTabBarActive: (val: string) => void
 }
 
@@ -15,9 +14,9 @@ const locaApp = localStorage.getItem('app') ? JSON.parse(localStorage.getItem('a
 
 const useAppStore = defineStore('app', () => {
   const theme = prefersDark ? 'dark' : 'light'
-  const mode = ref<ConfigProviderTheme>(theme)
+  const mode = ref(theme)
 
-  const swithMode = (val: ConfigProviderTheme) => {
+  const swithMode = (val: string) => {
     const rootStyleVars = val === 'light' ? null : Themes.dark
     StyleProvider(rootStyleVars)
     mode.value = val

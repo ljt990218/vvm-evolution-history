@@ -1,7 +1,7 @@
-<h1 align="center">vue3-vant-mobile</h1>
+<h1 align="center">vue3-varlet-mobile</h1>
 
 <p align='center'>
-  <a href="https://vue3-vant-mobile.netlify.app">Live Demo</a>
+  <a href="https://vue3-varlet-mobile.netlify.app">Live Demo</a>
 </p>
 
 <p align="center">
@@ -9,17 +9,17 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/easy-temps/vue3-vant-mobile" alt="license" />
-  <img src="https://img.shields.io/github/package-json/v/easy-temps/vue3-vant-mobile" alt="version" />
-  <img src="https://img.shields.io/github/repo-size/easy-temps/vue3-vant-mobile" alt="repo-size" />
-  <img src="https://img.shields.io/github/languages/top/easy-temps/vue3-vant-mobile" alt="languages" />
-  <img src="https://img.shields.io/github/issues-closed/easy-temps/vue3-vant-mobile" alt="issues" />
+  <img src="https://img.shields.io/github/license/easy-temps/vue3-varlet-mobile" alt="license" />
+  <img src="https://img.shields.io/github/package-json/v/easy-temps/vue3-varlet-mobile" alt="version" />
+  <img src="https://img.shields.io/github/repo-size/easy-temps/vue3-varlet-mobile" alt="repo-size" />
+  <img src="https://img.shields.io/github/languages/top/easy-temps/vue3-varlet-mobile" alt="languages" />
+  <img src="https://img.shields.io/github/issues-closed/easy-temps/vue3-varlet-mobile" alt="issues" />
 </p>
 
 <br>
 
 <p align='center'>
-<b>English</b> / <a href="https://github.com/easy-temps/vue3-vant-mobile/blob/main/README.zh-CN.md">简体中文</a>
+<b>English</b> / <a href="https://github.com/easy-temps/vue3-varlet-mobile/blob/main/README.zh-CN.md">简体中文</a>
 </p>
 
 <br>
@@ -52,7 +52,7 @@
 
 - 🌈 Git [hooks](./.husky) - lint and commit
 
-- 🪶 [Vant](https://github.com/youzan/vant) - Vue UI library for mobile web apps
+- 🪶 [varlet](https://github.com/varletjs/varlet) - Vue UI library for mobile web apps
 
 - 🔭 [vConsole](https://github.com/vadxq/vite-plugin-vconsole) - the developer tool for mobile web page
 
@@ -75,9 +75,8 @@
 - [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine
   - [`@unocss/preset-rem-to-px`](https://github.com/unocss/unocss/tree/main/packages/preset-rem-to-px) - Converts rem to px for all utilities
   - [`eslint-plugin-unocss`](https://github.com/devunt/eslint-plugin-unocss) - ESLint plugin for UnoCSS
-- [Vant](https://github.com/youzan/vant) - Vue UI library for mobile web apps
-  - [`vant-touch-emulator`](https://github.com/youzan/vant/tree/main/packages/vant-touch-emulator) - Simulate mobile touch events on the desktop
-  - [`vant-use`](https://github.com/youzan/vant/tree/main/packages/vant-use) - Built-in composition APIs of Vant
+- [varlet](https://github.com/varletjs/varlet) - Vue UI library for mobile web apps
+  - [`varlet/touch-emulator`](https://github.com/varletjs/varlet/tree/dev/packages/varlet-touch-emulator) - Simulate mobile touch events on the desktop
 
 ### Plugins
 
@@ -118,18 +117,18 @@
 
 ## Try it now
 
-> vue3-vant-mobile requires Node 18+
+> vue3-varlet-mobile requires Node 18+
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/easy-temps/vue3-vant-mobile/generate)
+[Create a repo from this template on GitHub](https://github.com/easy-temps/vue3-varlet-mobile/generate)
 
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit easy-temps/vue3-vant-mobile my-mobile-app
+npx degit easy-temps/vue3-varlet-mobile my-mobile-app
 cd my-mobile-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
@@ -172,7 +171,7 @@ Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along
 
 ## Community
 
-We recommend that [issue](https://github.com/easy-temps/vue3-vant-mobile/issues) be used for problem feedback, or Wechat group.
+We recommend that [issue](https://github.com/easy-temps/vue3-varlet-mobile/issues) be used for problem feedback, or Wechat group.
 
 <img style="width: 25%" src="https://cdn.jsdelivr.net/gh/CharleeWa/static/easy-temps.png" />
 
@@ -295,10 +294,10 @@ We recommend that [issue](https://github.com/easy-temps/vue3-vant-mobile/issues)
 ## Star History
 
 <p align="left">
-  <a target="_blank" href="https://star-history.com/#easy-temps/vue3-vant-mobile&Date">
+  <a target="_blank" href="https://star-history.com/#easy-temps/vue3-varlet-mobile&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=easy-temps/vue3-vant-mobile&type=Date&theme=dark">
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=easy-temps/vue3-vant-mobile&type=Date">
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=easy-temps/vue3-varlet-mobile&type=Date&theme=dark">
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=easy-temps/vue3-varlet-mobile&type=Date">
     </picture>
   </a>
 </p>

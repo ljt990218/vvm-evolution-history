@@ -32,9 +32,9 @@ export const locale = computed({
   },
 })
 
-// 载入 vant 语言包
+// 载入 varlet 语言包
 Locale.add('zh-CN', Locale.zhCN)
 Locale.add('en-US', Locale.enUS)
 
-// 根据当前语言切换 vant 语言包
+// 根据当前语言切换 varlet 语言包
 Locale.use(locale.value)

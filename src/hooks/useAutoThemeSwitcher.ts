@@ -3,6 +3,7 @@ import type { AppStore } from '@/stores/modules/app'
 export default function useAutoThemeSwitcher(appStore: AppStore) {
   const handleAttributeChange = () => {
     const rootElement = document.documentElement
+
     if (rootElement.classList.contains('dark'))
       appStore.swithMode('dark')
     else
@@ -19,6 +20,11 @@ export default function useAutoThemeSwitcher(appStore: AppStore) {
   const targetElement = document.querySelector('html')
 
   const initializeThemeSwitcher = () => {
+    if (document.documentElement.classList.contains('dark'))
+      appStore.swithMode('dark')
+    else
+      appStore.swithMode('light')
+
     observer.observe(targetElement, observerOptions)
   }
 

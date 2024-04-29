@@ -1,7 +1,7 @@
-<h1 align="center">vue3-vant-mobile</h1>
+<h1 align="center">vue3-varlet-mobile</h1>
 
 <p align='center'>
-  <a href="https://vue3-vant-mobile.netlify.app">在线 Demo</a>
+  <a href="https://vue3-varlet-mobile.netlify.app">在线 Demo</a>
 </p>
 
 <p align="center">
@@ -9,17 +9,17 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/easy-temps/vue3-vant-mobile" alt="license" />
-  <img src="https://img.shields.io/github/package-json/v/easy-temps/vue3-vant-mobile" alt="version" />
-  <img src="https://img.shields.io/github/repo-size/easy-temps/vue3-vant-mobile" alt="repo-size" />
-  <img src="https://img.shields.io/github/languages/top/easy-temps/vue3-vant-mobile" alt="languages" />
-  <img src="https://img.shields.io/github/issues-closed/easy-temps/vue3-vant-mobile" alt="issues" />
+  <img src="https://img.shields.io/github/license/easy-temps/vue3-varlet-mobile" alt="license" />
+  <img src="https://img.shields.io/github/package-json/v/easy-temps/vue3-varlet-mobile" alt="version" />
+  <img src="https://img.shields.io/github/repo-size/easy-temps/vue3-varlet-mobile" alt="repo-size" />
+  <img src="https://img.shields.io/github/languages/top/easy-temps/vue3-varlet-mobile" alt="languages" />
+  <img src="https://img.shields.io/github/issues-closed/easy-temps/vue3-varlet-mobile" alt="issues" />
 </p>
 
 <br>
 
 <p align='center'>
-<a href="https://github.com/easy-temps/vue3-vant-mobile/blob/main/README.md">English</a> / <b>简体中文</b>
+<a href="https://github.com/easy-temps/vue3-varlet-mobile/blob/main/README.md">English</a> / <b>简体中文</b>
 </p>
 
 <br>
@@ -52,7 +52,7 @@
 
 - 🌈 Git [hooks](./.husky) - 提交代码 eslint 检测 和 提交规范检测
 
-- 🪶 [Vant](https://github.com/youzan/vant) - 移动端 Vue 组件库
+- 🪶 [varlet](https://github.com/varletjs/varlet) - 移动端 Vue 组件库
 
 - 🔭 [vConsole](https://github.com/vadxq/vite-plugin-vconsole) - 移动端网页开发工具
 
@@ -75,9 +75,8 @@
 - [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
   - [`@unocss/preset-rem-to-px`](https://github.com/unocss/unocss/tree/main/packages/preset-rem-to-px) - 将所有实用程序的 rem 转换为 px
   - [`eslint-plugin-unocss`](https://github.com/devunt/eslint-plugin-unocss) - Unocss 的 ESLint 插件
-- [Vant](https://github.com/youzan/vant) - 移动端 Vue 组件库
-  - [`vant-touch-emulator`](https://github.com/youzan/vant/tree/main/packages/vant-touch-emulator) - 在桌面端上模拟移动端 touch 事件
-  - [`vant-use`](https://github.com/youzan/vant/tree/main/packages/vant-use) - Vant 内置的组合式 API
+- [varlet](https://github.com/varletjs/varlet) - 移动端 Vue 组件库
+  - [`varlet/touch-emulator`](https://github.com/varletjs/varlet/tree/dev/packages/varlet-touch-emulator) - 在桌面端上模拟移动端 touch 事件
 
 ### 插件
 
@@ -118,18 +117,18 @@
 
 ## 现在可以试试
 
-> vue3-vant-mobile 需要 Node 版本 18+
+> vue3-varlet-mobile 需要 Node 版本 18+
 
 ### GitHub 模板
 
-[使用这个模板创建仓库](https://github.com/easy-temps/vue3-vant-mobile/generate)
+[使用这个模板创建仓库](https://github.com/easy-temps/vue3-varlet-mobile/generate)
 
 ### 克隆到本地
 
 如果您更喜欢使用更干净的 git 历史记录手动执行此操作
 
 ```bash
-npx degit easy-temps/vue3-vant-mobile my-mobile-app
+npx degit easy-temps/vue3-varlet-mobile my-mobile-app
 cd my-mobile-app
 pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 ```
@@ -172,7 +171,7 @@ pnpm build
 
 ## 社区
 
-我们推荐使用 [议题](https://github.com/easy-temps/vue3-vant-mobile/issues) 来反馈问题, 或者您也可以通过微信群联系我们。
+我们推荐使用 [议题](https://github.com/easy-temps/vue3-varlet-mobile/issues) 来反馈问题, 或者您也可以通过微信群联系我们。
 
 <img style="width: 25%" src="https://cdn.jsdelivr.net/gh/CharleeWa/static/easy-temps.png" />
 
@@ -295,10 +294,10 @@ pnpm build
 ## 星星趋势
 
 <p align="left">
-  <a target="_blank" href="https://star-history.com/#easy-temps/vue3-vant-mobile&Date">
+  <a target="_blank" href="https://star-history.com/#easy-temps/vue3-varlet-mobile&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=easy-temps/vue3-vant-mobile&type=Date&theme=dark">
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=easy-temps/vue3-vant-mobile&type=Date">
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=easy-temps/vue3-varlet-mobile&type=Date&theme=dark">
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=easy-temps/vue3-varlet-mobile&type=Date">
     </picture>
   </a>
 </p>

@@ -1,6 +1,5 @@
 import type { AxiosError, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
-import { showNotify } from 'vant'
 import { localStorage } from '@/utils/local-storage'
 import { STORAGE_TOKEN_KEY } from '@/stores/mutation-type'
 
@@ -28,21 +27,14 @@ function errorHandler(error: RequestError): Promise<any> {
   if (error.response) {
     const { data = {}, status, statusText } = error.response
     // 403 无权限
-    if (status === 403) {
-      showNotify({
-        type: 'danger',
-        message: (data && data.message) || statusText,
-      })
-    }
+    if (status === 403)
+      Snackbar({ type: 'warning', content: (data && data.message) || statusText })
+
     // 401 未登录/未授权
-    if (status === 401 && data.result && data.result.isLogin) {
-      showNotify({
-        type: 'danger',
-        message: 'Authorization verification failed',
-      })
+    if (status === 401 && data.result && data.result.isLogin)
+      Snackbar({ type: 'warning', content: 'Authorization verification failed' })
       // 如果你需要直接跳转登录页面
       // location.replace(loginRoutePath)
-    }
   }
   return Promise.reject(error)
 }
