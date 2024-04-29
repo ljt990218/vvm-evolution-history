@@ -1,10 +1,10 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'KeepAlive',
+  name: 'Keepalive',
 })
 
 definePage({
-  name: 'KeepAlive',
+  name: 'Keepalive',
   meta: {
     level: 2,
     title: '🧡 KeepAlive',
@@ -13,12 +13,17 @@ definePage({
   },
 })
 
-const value = ref(1)
+const value = ref(10)
 </script>
 
 <template>
   <Container>
-    <p>{{ $t('keepAlive.label') }}</p>
-    <van-stepper v-model="value" />
+    <var-paper :elevation="2" class="mt-20 flex flex-col items-center p-10">
+      <p class="text-center">
+        {{ $t('keepAlive.label') }}
+      </p>
+
+      <var-counter v-model="value" />
+    </var-paper>
   </Container>
 </template>

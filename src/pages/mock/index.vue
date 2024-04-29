@@ -32,17 +32,19 @@ const reset = () => messages.value = ''
       <div v-if="messages">
         {{ messages }}
       </div>
-      <VanEmpty v-else :description="$t('mock.noData')" />
+      <div v-else class="text-center">
+        {{ $t('mock.noData') }}
+      </div>
     </div>
 
-    <van-space class="m-10" direction="vertical" fill>
-      <VanButton type="primary" round block @click="pull">
+    <var-space class="m-10" direction="column">
+      <var-button type="primary" block @click="pull">
         {{ $t('mock.pull') }}
-      </VanButton>
-      <VanButton type="default" round block @click="reset">
+      </var-button>
+      <var-button type="default" block @click="reset">
         {{ $t('mock.reset') }}
-      </VanButton>
-    </van-space>
+      </var-button>
+    </var-space>
   </Container>
 </template>
 
