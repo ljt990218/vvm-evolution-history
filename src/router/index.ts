@@ -1,8 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router/auto'
 
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 import type { EnhancedRouteLocation } from './types'
 import useRouteTransitionNameStore from '@/stores/modules/routeTransitionName'
 import useRouteCacheStore from '@/stores/modules/routeCache'
+
+NProgress.configure({ showSpinner: true, parent: '#app' })
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
@@ -10,7 +15,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to: EnhancedRouteLocation, from, next) => {
-  LoadingBar.start()
+  NProgress.start()
 
   const routeCacheStore = useRouteCacheStore()
   const routeTransitionNameStore = useRouteTransitionNameStore()
@@ -31,7 +36,7 @@ router.beforeEach((to: EnhancedRouteLocation, from, next) => {
 })
 
 router.afterEach(() => {
-  LoadingBar.finish()
+  NProgress.done()
 })
 
 export default router
