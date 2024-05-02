@@ -44,8 +44,9 @@ export default ({ mode }: ConfigEnv): UserConfig => {
             viewportWidth: 375,
             maxDisplayWidth: 600,
             rootContainingBlockSelectorList: [
-              'van-tabbar',
+              'var-app-bar',
               'van-popup',
+              'var-bottom-navigation',
             ],
           }),
         ],
