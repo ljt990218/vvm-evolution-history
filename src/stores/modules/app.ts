@@ -17,8 +17,9 @@ const useAppStore = defineStore('app', () => {
   const mode = ref(theme)
 
   const swithMode = (val: string) => {
-    const rootStyleVars = val === 'light' ? null : Themes.dark
+    const rootStyleVars = val === 'light' ? Themes.toViewport({}, { viewportUnit: 'vw' }) : Themes.toViewport({ ...Themes.dark }, { viewportUnit: 'vw' })
     StyleProvider(rootStyleVars)
+    document.documentElement.style.setProperty('color-scheme', val === 'light' ? 'light' : 'dark')
     mode.value = val
   }
 

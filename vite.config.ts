@@ -41,6 +41,8 @@ export default ({ mode }: ConfigEnv): UserConfig => {
           // https://github.com/wswmsword/postcss-mobile-forever
           viewport({
             appSelector: '#app',
+            mobileUnit: 'vw',
+            unitPrecision: 6,
             viewportWidth: 375,
             maxDisplayWidth: 600,
             rootContainingBlockSelectorList: [

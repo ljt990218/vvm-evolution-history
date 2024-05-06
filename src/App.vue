@@ -27,6 +27,7 @@ useHead({
 })
 
 const appStore = useAppStore()
+// appStore.swithMode('dark')
 
 const routeTransitionNameStore = useRouteTransitionNameStore()
 const { routeTransitionName } = storeToRefs(routeTransitionNameStore)
