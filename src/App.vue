@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia'
 import useAppStore from '@/stores/modules/app'
 import useRouteCache from '@/stores/modules/routeCache'
 import useRouteTransitionNameStore from '@/stores/modules/routeTransitionName'
-import useAutoThemeSwitcher from '@/hooks/useAutoThemeSwitcher'
+// import useAutoThemeSwitcher from '@/hooks/useAutoThemeSwitcher'
 
 useHead({
   title: 'Vue3 Varlet Mobile',
@@ -27,19 +27,22 @@ useHead({
 })
 
 const appStore = useAppStore()
-// appStore.swithMode('dark')
+if (document.documentElement.classList.contains('dark'))
+  appStore.swithMode('dark')
+else
+  appStore.swithMode('light')
 
 const routeTransitionNameStore = useRouteTransitionNameStore()
 const { routeTransitionName } = storeToRefs(routeTransitionNameStore)
-const { initializeThemeSwitcher } = useAutoThemeSwitcher(appStore)
+// const { initializeThemeSwitcher } = useAutoThemeSwitcher(appStore)
 
 const keepAliveRouteNames = computed(() => {
   return useRouteCache().routeCaches as string[]
 })
 
-onMounted(() => {
-  initializeThemeSwitcher()
-})
+// onMounted(() => {
+//   initializeThemeSwitcher()
+// })
 </script>
 
 <template>
