@@ -32,7 +32,7 @@ const reset = () => messages.value = ''
       <div v-if="messages">
         {{ messages }}
       </div>
-      <div v-else class="text-center">
+      <div v-else class="text-center color-#969799">
         {{ $t('mock.noData') }}
       </div>
     </div>

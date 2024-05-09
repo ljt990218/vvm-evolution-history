@@ -11,18 +11,16 @@ definePage({
 
 <template>
   <Container>
-    <var-paper :elevation="2" class="mt-20 flex flex-col items-center p-10">
-      <h1 class="text-6xl color-pink font-semibold">
-        Hello, Unocss!
-      </h1>
+    <h1 class="text-6xl color-pink font-semibold">
+      Hello, Unocss!
+    </h1>
 
-      <p class="mt-4 text-gray-700 dark:text-white">
-        This is a simple example of Unocss in action.
-      </p>
+    <p class="mt-4 text-gray-700 dark:text-white">
+      This is a simple example of Unocss in action.
+    </p>
 
-      <button class="btn">
-        Button
-      </button>
-    </var-paper>
+    <button class="px-10 py-6 font-bold btn">
+      Button
+    </button>
   </Container>
 </template>

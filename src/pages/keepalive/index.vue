@@ -18,12 +18,10 @@ const value = ref(10)
 
 <template>
   <Container>
-    <var-paper :elevation="2" class="mt-20 flex flex-col items-center p-10">
-      <p class="text-center">
-        {{ $t('keepAlive.label') }}
-      </p>
+    <p>
+      {{ $t('keepAlive.label') }}
+    </p>
 
-      <var-counter v-model="value" />
-    </var-paper>
+    <var-counter v-model="value" />
   </Container>
 </template>

@@ -62,7 +62,7 @@ function menuClick(item: any) {
 
 <template>
   <Container :padding-x="0">
-    <var-paper :elevation="2" class="m-10 mt-20">
+    <var-paper :elevation="0" class="m-10 mt-20">
       <var-cell ripple :border="true" :border-offset="0">
         {{ t('home.darkMode') }}
         <template #extra>
