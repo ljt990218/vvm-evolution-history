@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppMobileDetector: typeof import('./components/AppMobileDetector.vue')['default']
     Chart: typeof import('./components/Chart/index.vue')['default']
     Container: typeof import('./components/Container.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
@@ -23,6 +24,7 @@ declare module 'vue' {
     VarPaper: typeof import('@varlet/ui')['_PaperComponent']
     VarPicker: typeof import('@varlet/ui')['_PickerComponent']
     VarPopup: typeof import('@varlet/ui')['_PopupComponent']
+    VarResult: typeof import('@varlet/ui')['_ResultComponent']
     VarSlider: typeof import('@varlet/ui')['_SliderComponent']
     VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
     VarSwitch: typeof import('@varlet/ui')['_SwitchComponent']

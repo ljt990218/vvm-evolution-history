@@ -1,4 +1,8 @@
 {
+  "app": {
+    "warning": "⚠️ 警告",
+    "pleaseUseMobileVisit": "请使用移动设备访问"
+  },
   "home": {
     "darkMode": "🌗 暗黑模式",
     "mockGuide": "💿 Mock 指南",

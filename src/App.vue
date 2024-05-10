@@ -42,13 +42,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <NavBar />
-  <router-view v-slot="{ Component, route }">
-    <transition :name="routeTransitionName">
-      <keep-alive :include="keepAliveRouteNames">
-        <component :is="Component" :key="route.name" />
-      </keep-alive>
-    </transition>
-  </router-view>
-  <TabBar />
+  <app-mobile-detector>
+    <NavBar />
+    <router-view v-slot="{ Component, route }">
+      <transition :name="routeTransitionName">
+        <keep-alive :include="keepAliveRouteNames">
+          <component :is="Component" :key="route.name" />
+        </keep-alive>
+      </transition>
+    </router-view>
+    <TabBar />
+  </app-mobile-detector>
 </template>

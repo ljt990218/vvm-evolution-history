@@ -21,7 +21,7 @@ const useAppStore = defineStore('app', () => {
       ? Themes.toViewport({ '--color-body': '#f7f8fa' }, { viewportUnit: 'vw' })
       : Themes.toViewport({ ...Themes.dark }, { viewportUnit: 'vw' })
     StyleProvider(rootStyleVars)
-    document.documentElement.style.setProperty('color-scheme', val === 'light' ? 'light' : 'dark')
+
     mode.value = val
   }
 
