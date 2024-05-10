@@ -56,7 +56,7 @@
 
 - 🔭 [vConsole](https://github.com/vadxq/vite-plugin-vconsole) - the developer tool for mobile web page
 
-- 📱 Browser adaptation - use viewport vw/vh units
+- 📱 Browser adaptation - use viewport vmin/vh units
 
 - 💻 [Desktop optimization](https://github.com/wswmsword/postcss-mobile-forever) - the mobile area
 
@@ -180,112 +180,17 @@ We recommend that [issue](https://github.com/easy-temps/vue3-varlet-mobile/issue
 <table>
 <tr>
   <td align="center">
-    <a href="https://github.com/CharleeWa">
-      <img src="https://avatars.githubusercontent.com/u/22477554?s=96&v=4" width="90;" alt="CharleeWa"/>
-      <br />
-      <sub><b>Charlie Wang</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/weiq">
-      <img src="https://avatars.githubusercontent.com/u/1697158?v=4" width="90;" alt="weiq"/>
-      <br />
-      <sub><b>魏小雨</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/AlphaYoung111">
-      <img src="https://avatars.githubusercontent.com/u/54132313?v=4" width="90;" alt="AlphaYoung"/>
-      <br />
-      <sub><b>AlphaYoung</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/Leezon">
-      <img src="https://avatars.githubusercontent.com/u/38120280?v=4" width="90;" alt="Leezon"/>
-      <br />
-      <sub><b>Leezon</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/leo4developer">
-      <img src="https://avatars.githubusercontent.com/u/15160478?v=4" width="90;" alt="liuNing"/>
-      <br />
-      <sub><b>liuNing</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/wswmsword">
-      <img src="https://avatars.githubusercontent.com/u/26893092?v=4" width="90;" alt="wswmsword"/>
-      <br />
-      <sub><b>wswmsword</b></sub>
-    </a>
-  </td>
-</tr>
-<tr>
-  <td align="center">
-    <a href="https://github.com/Kysen777">
-      <img src="https://avatars.githubusercontent.com/u/63892082?v=4" width="90;" alt="Kysen"/>
-      <br />
-      <sub><b>Kysen</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/smartsf">
-      <img src="https://avatars.githubusercontent.com/u/19995400?v=4" width="90;" alt="smartsf"/>
-      <br />
-      <sub><b>阿峰</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/ReginYuan">
-      <img src="https://avatars.githubusercontent.com/u/49477488?v=4" width="90;" alt="ReginYuan"/>
-      <br />
-      <sub><b>ReginYuan</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/InsHomePgup">
-      <img src="https://avatars.githubusercontent.com/u/47906083?v=4" width="90;" alt="Abraham K."/>
-      <br />
-      <sub><b>Abraham K.</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/wowping">
-      <img src="https://avatars.githubusercontent.com/u/137802961?v=4" width="90;" alt="Mia Campbell"/>
-      <br />
-      <sub><b>Mia Campbell</b></sub>
-    </a>
-  </td>
-  <td align="center">
     <a href="https://github.com/ljt990218">
       <img src="https://avatars.githubusercontent.com/u/50509815?v=4" width="90;" alt="ljt990218"/>
       <br />
       <sub><b>ljt990218</b></sub>
     </a>
   </td>
-</tr>
-<tr>
   <td align="center">
-    <a href="https://github.com/SublimeCT">
-      <img src="https://avatars.githubusercontent.com/u/20380890?v=4" width="90;" alt="sven"/>
+    <a href="https://github.com/CharleeWa">
+      <img src="https://avatars.githubusercontent.com/u/22477554?s=96&v=4" width="90;" alt="CharleeWa"/>
       <br />
-      <sub><b>sven</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/ChunyuPCY">
-      <img src="https://avatars.githubusercontent.com/u/21986942?v=4" width="90;" alt="ChunyuPCY"/>
-      <br />
-      <sub><b>ChunyuPCY</b></sub>
-    </a>
-  </td>
-  <td align="center">
-    <a href="https://github.com/qiyue2015">
-      <img src="https://avatars.githubusercontent.com/u/11554433?v=4" width="90;" alt="qiyue2015"/>
-      <br />
-      <sub><b>qiyue2015</b></sub>
+      <sub><b>Charlie Wang</b></sub>
     </a>
   </td>
 </tr>

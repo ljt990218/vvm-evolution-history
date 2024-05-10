@@ -18,8 +18,8 @@ const useAppStore = defineStore('app', () => {
 
   const swithMode = (val: string) => {
     const rootStyleVars = val === 'light'
-      ? Themes.toViewport({ '--color-body': '#f7f8fa', '--result-title-font-size': '32px', '--result-description-font-size': '14px' }, { viewportUnit: 'vmin' })
-      : Themes.toViewport({ ...Themes.dark, '--result-title-font-size': '32px', '--result-description-font-size': '14px' }, { viewportUnit: 'vmin' })
+      ? Themes.toViewport({ '--color-body': '#f7f8fa', '--result-title-font-size': '32px', '--result-description-font-size': '14px' })
+      : Themes.toViewport({ ...Themes.dark, '--result-title-font-size': '32px', '--result-description-font-size': '14px' })
     StyleProvider(rootStyleVars)
 
     mode.value = val
