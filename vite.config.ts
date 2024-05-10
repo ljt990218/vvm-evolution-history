@@ -40,11 +40,13 @@ export default ({ mode }: ConfigEnv): UserConfig => {
           autoprefixer(),
           // https://github.com/wswmsword/postcss-mobile-forever
           viewport({
-            appSelector: '#app',
-            mobileUnit: 'vw',
+            // appSelector: '#app',
+            mobileUnit: 'vmin',
             unitPrecision: 6,
             viewportWidth: 375,
-            maxDisplayWidth: 600,
+            enableMediaQuery: true,
+            disableDesktop: true,
+            // maxDisplayWidth: 600,
             rootContainingBlockSelectorList: [
               'var-app-bar',
               'van-popup',
